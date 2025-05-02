@@ -14,7 +14,7 @@ const dataBase = {animals: [
     ]}
 
 app.get("/", (req, res) => {
-    res.send("HALLO WORLD")
+    res.send("HALLO")
 })
 
 app.get('/home/dataBase', (req, res) => {
@@ -22,7 +22,6 @@ app.get('/home/dataBase', (req, res) => {
         .filter(c => c.title.indexOf(req.query.title as string) > -1 )
     res.json(foundAnimals)
 })
-
 
 app.get('/home/:title', (req, res) => {
     const found = [
