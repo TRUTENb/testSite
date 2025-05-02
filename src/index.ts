@@ -13,6 +13,10 @@ const dataBase = {animals: [
         {id: 5, title: "wolf"},
     ]}
 
+app.get("/", (req, res) => {
+    res.sendStatus(404)
+})
+
 app.get('/home/dataBase', (req, res) => {
     const foundAnimals= dataBase.animals
         .filter(c => c.title.indexOf(req.query.title as string) > -1 )
