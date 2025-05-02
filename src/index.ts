@@ -14,7 +14,7 @@ const dataBase = {animals: [
     ]}
 
 app.get("/", (req, res) => {
-    res.send("HALLO")
+    res.send("HALLO d")
 })
 
 app.get('/home/dataBase', (req, res) => {
